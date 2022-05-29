@@ -1,0 +1,10 @@
+h1 {
+  color:green;
+  display: flex;
+  justify-content: center;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+}
