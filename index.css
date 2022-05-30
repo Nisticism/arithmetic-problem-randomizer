@@ -14,10 +14,10 @@ h1 {
   justify-content: center;
   margin-left: 20%;
   margin-right: 20%;
-  background-color: rgb(169, 175, 255);
+  background-color: rgb(169, 189, 255);
   margin-top: 10px;
   border-radius: 20px;
-  box-shadow: 4px 4px 2px 1px rgba(0, 42, 255, 0.2);
+  box-shadow: 4px 4px 2px 1px rgba(0, 68, 255, 0.2);
 }
 
 @media only screen and (max-width: 550px) {

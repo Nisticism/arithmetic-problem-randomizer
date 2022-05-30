@@ -25,6 +25,10 @@ function randomizeProblem(min, max) {
   return "What is " + numberA + " + " + numberB + "?";
 }
 
+function randomize(min, max) {
+  return Math.floor(Math.random() * (max + 1 - min) + min);
+}
+
 async function answer() {
   let result;
   var request = new XMLHttpRequest();
@@ -62,8 +66,4 @@ async function answer() {
     console.error(request.statusText);
   };
   request.send(result);
-}
-
-function randomize(min, max) {
-  return Math.floor(Math.random() * (max + 1 - min) + min);
 }

@@ -18,12 +18,13 @@ Here are some steps I plan to follow during the creation of the app:
 
 Per task.md:
 
- - Add unit testing
- - Generating more complex mathematical expressions
- - Maintain a history of questions
- - Keep a running total score
- - Give multiple questions at once
- - Utilize a timer
- - Limit the number of incorrect answers
- - Brand the application
- - _Anything_ else
+ - Add unit testing:  I tested most features as I went by logging results.
+ - Generating more complex mathematical expressions:  This is something I could definitely implement in the future.
+ - Maintain a history of questions:  Questions could be stored in browser local storage or something in the future.
+ - Keep a running total score:  This is a change I implemented
+ - Give multiple questions at once:  This is a neat idea for a future version.
+ - Utilize a timer:  This is a neat idea that could be done with a set interval method.
+ - Limit the number of incorrect answers:  This is a great idea.  Technically I have done with by resetting the streak and the maximum value to 10 as soon as a single incorrect
+    answer is given, but I could change that around a bit.
+ - Brand the application:  Hmmmm ... Arithmetic Problem Randomizer?
+ - _Anything_ else:  I also kept track of the total questions answered and the number of consecutive correct answers
