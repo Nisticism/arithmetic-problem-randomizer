@@ -5,11 +5,22 @@
     <title>Arithmetic Problem Randomizer</title>
     <link rel="stylesheet" href="index.css">
   </head>
-  <body>
+  <body onload="setup()">
     <div class="app">
-      <h1>My First Heading</h1>
-      <p>My first paragraph.</p>
-      <button onclick="test()"></button>
+      <div class="space-between">
+        <span class="invis" id="invis">Streak: 0</span>
+        <h1 id="app-title" class="center"></h1>
+        <span class="streak" id="streak">Streak: 0</span>
+      </div>
+      <div class="center">
+        <span class="problem" id="problem"></span>
+      </div>
+      <div class="center">
+        <input id="input"/>
+      </div>
+      <div class="center answer">
+        <button onclick="answer()">Answer</button>
+      </div>
     </div>
     <script src="index.js"/>
     <script src="https://unpkg.com/mathjs@10.6.0/"></script>

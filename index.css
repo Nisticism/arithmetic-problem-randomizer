@@ -1,10 +1,43 @@
 h1 {
-  color:green;
+  color:rgb(14, 49, 14);
+}
+
+.center {
   display: flex;
   justify-content: center;
 }
 
 .app {
-  display: flex;
+  display: block;
   justify-content: center;
+}
+
+.problem {
+  padding-bottom: 10px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+#input {
+  padding: 10px;
+}
+
+.answer {
+  padding: 10px;
+}
+
+.streak {
+  float: right;
+  margin-right: 10%;
+  padding-top: 32px;
+}
+
+.space-between {
+  display: flex;
+  justify-content: space-around;
+}
+
+.invis {
+  visibility: hidden;
+  margin-left: 10%;
 }
