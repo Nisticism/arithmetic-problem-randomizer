@@ -25,28 +25,43 @@ function randomizeProblem(min, max) {
   return "What is " + numberA + " + " + numberB + "?";
 }
 
-function answer() {
-  let answer = parseInt(input.value);
-  if (answer) {
-    if (numberA + numberB == answer) {
-      streak += 1;
-      alert("Correct");
-      maxValue += 1;
-      total += 1;
-      totalCorrect += 1;
-      problem.innerText = randomizeProblem(minValue, maxValue);
-    } else {
-      streak = 0;
-      total += 1;
-      alert("Incorrect");
-      maxValue = 10;
+async function answer() {
+  let result;
+  var request = new XMLHttpRequest();
+  request.open('GET', 'http://api.mathjs.org/v4/?expr=' + numberA + "%2B" + numberB);
+  request.onload = function (e) {
+    if (request.readyState === 4) {
+      if (request.status === 200) {
+        let answer = parseInt(input.value);
+        if (answer) {
+          if (answer == request.responseText) {
+            streak += 1;
+            alert("Correct");
+            maxValue += 1;
+            total += 1;
+            totalCorrect += 1;
+            problem.innerText = randomizeProblem(minValue, maxValue);
+          } else {
+            streak = 0;
+            total += 1;
+            alert("Incorrect");
+            maxValue = 10;
+          }
+        } else {
+          alert("Must enter a number!");
+        }
+        totalText.innerText = "Total Guesses: " + total;
+        totalCorrectText.innerText = "Total Correct: " + totalCorrect;
+        streakText.innerText = "Streak: " + streak;
+      } else {
+        console.error(request.statusText);
+      }
     }
-  } else {
-    alert("Must enter a number!");
-  }
-  totalText.innerText = "Total Guesses: " + total;
-  totalCorrectText.innerText = "Total Correct: " + totalCorrect;
-  streakText.innerText = "Streak: " + streak;
+  };
+  request.onerror = function (e) {
+    console.error(request.statusText);
+  };
+  request.send(result);
 }
 
 function randomize(min, max) {

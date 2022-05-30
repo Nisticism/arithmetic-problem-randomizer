@@ -15,3 +15,15 @@ Here are some steps I plan to follow during the creation of the app:
         e).  The number of consecutive correct answers could be displayed somewhere
 4).  Each expression should be randomly generated with two variables.  Each variable should have a range.
 5).  A function should be called each time the user clicks submit that checks to see if the number in the input box matches the correct answer.
+
+Per task.md:
+
+ - Add unit testing
+ - Generating more complex mathematical expressions
+ - Maintain a history of questions
+ - Keep a running total score
+ - Give multiple questions at once
+ - Utilize a timer
+ - Limit the number of incorrect answers
+ - Brand the application
+ - _Anything_ else
