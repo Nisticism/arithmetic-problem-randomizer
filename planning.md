@@ -12,5 +12,6 @@ Here are some steps I plan to follow during the creation of the app:
         b).  The app could allow for multiple wrong guesses
         c).  The app could allow for multiple different types of expressions, and check boxes to save these settings
         d).  Each number in the expressions could have a minimum and maximum value that users can edit!
+        e).  The number of consecutive correct answers could be displayed somewhere
 4).  Each expression should be randomly generated with two variables.  Each variable should have a range.
 5).  A function should be called each time the user clicks submit that checks to see if the number in the input box matches the correct answer.

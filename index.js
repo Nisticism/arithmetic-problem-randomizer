@@ -1,13 +1,18 @@
-let numberA = 0;
-let numberB = 0;
-let streak = 0;
-let minValue = 1;
-let maxValue = 10;
 const title = document.getElementById("app-title");
 const problem = document.getElementById("problem");
 const input = document.getElementById("input");
 const streakText = document.getElementById("streak");
 const invis = document.getElementById("invis");
+const totalText = document.getElementById("total");
+const totalCorrectText = document.getElementById("total-correct");
+
+let numberA = 0;
+let numberB = 0;
+let streak = 0;
+let minValue = 1;
+let maxValue = 10;
+let total = 0;
+let totalCorrect = 0;
 
 function setup() {
   title.innerText = "Arithmetic Problem Randomizer"
@@ -22,18 +27,26 @@ function randomizeProblem(min, max) {
 
 function answer() {
   let answer = parseInt(input.value);
-  if (answer && (numberA + numberB) == answer) {
-    streak += 1;
-    alert("correct");
-    maxValue += 1;
-    problem.innerText = randomizeProblem(minValue, maxValue);
+  if (answer) {
+    if (numberA + numberB == answer) {
+      streak += 1;
+      alert("Correct");
+      maxValue += 1;
+      total += 1;
+      totalCorrect += 1;
+      problem.innerText = randomizeProblem(minValue, maxValue);
+    } else {
+      streak = 0;
+      total += 1;
+      alert("Incorrect");
+      maxValue = 10;
+    }
   } else {
-    streak = 0;
-    alert("incorrect");
-    maxValue = 10;
+    alert("Must enter a number!");
   }
+  totalText.innerText = "Total Guesses: " + total;
+  totalCorrectText.innerText = "Total Correct: " + totalCorrect;
   streakText.innerText = "Streak: " + streak;
-  console.log(input.value);
 }
 
 function randomize(min, max) {
