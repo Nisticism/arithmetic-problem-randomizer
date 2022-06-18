@@ -27,4 +27,4 @@ Per task.md:
  - Limit the number of incorrect answers:  This is a great idea.  Technically I have done with by resetting the streak and the maximum value to 10 as soon as a single incorrect
     answer is given, but I could change that around a bit.
  - Brand the application:  Hmmmm ... Arithmetic Problem Randomizer?
- - _Anything_ else:  I also kept track of the total questions answered and the number of consecutive correct answers
+ - _Anything_ else:  I also kept track of the total questions answered and the number of consecutive correct answers.
